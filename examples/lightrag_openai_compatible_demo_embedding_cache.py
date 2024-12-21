@@ -4,14 +4,8 @@ from lightrag import LightRAG, QueryParam
 from lightrag.llm import openai_complete_if_cache, openai_embedding
 from lightrag.utils import EmbeddingFunc
 import numpy as np
-import pymupdf4llm
-import pathlib
-from dotenv import load_dotenv 
 
-load_dotenv()
-
-WORKING_DIR = "./宁德时代2024半年度报告"
-
+WORKING_DIR = "./dickens"
 
 if not os.path.exists(WORKING_DIR):
     os.mkdir(WORKING_DIR)
@@ -21,12 +15,12 @@ async def llm_model_func(
     prompt, system_prompt=None, history_messages=[], keyword_extraction=False, **kwargs
 ) -> str:
     return await openai_complete_if_cache(
-        "gpt-4o",
+        "solar-mini",
         prompt,
         system_prompt=system_prompt,
         history_messages=history_messages,
-        api_key=os.getenv("OPENAI_API_KEY"),
-        base_url="https://api.xhub.chat/v1/",
+        api_key=os.getenv("UPSTAGE_API_KEY"),
+        base_url="https://api.upstage.ai/v1/solar",
         **kwargs,
     )
 
@@ -34,10 +28,10 @@ async def llm_model_func(
 async def embedding_func(texts: list[str]) -> np.ndarray:
     return await openai_embedding(
         texts,
-        model="text-embedding-3-large",
-        api_key=os.getenv("OPENAI_API_KEY"),
-        base_url="https://api.xhub.chat/v1/",
-       )
+        model="solar-embedding-1-large-query",
+        api_key=os.getenv("UPSTAGE_API_KEY"),
+        base_url="https://api.upstage.ai/v1/solar",
+    )
 
 
 async def get_embedding_dim():
@@ -66,6 +60,10 @@ async def main():
 
         rag = LightRAG(
             working_dir=WORKING_DIR,
+            embedding_cache_config={
+                "enabled": True,
+                "similarity_threshold": 0.90,
+            },
             llm_model_func=llm_model_func,
             embedding_func=EmbeddingFunc(
                 embedding_dim=embedding_dimension,
@@ -74,40 +72,27 @@ async def main():
             ),
         )
 
-        file_path = "./data/宁德时代2024半年度报告.pdf"
-        md_file_path = pathlib.Path(file_path.replace(".pdf", ".md"))
-        
-        # 判断是否存在对应的 markdown 文件
-        if md_file_path.exists():
-            # 如果存在，直接读取 markdown 文件
-            md_text = md_file_path.read_text(encoding='utf-8')
-        else:
-            # 如果不存在，将 PDF 转换为 markdown
-            md_text = pymupdf4llm.to_markdown(file_path)
-            # 保存 markdown 文件
-            md_file_path.write_bytes(md_text.encode())
-        
-        # 插入到 RAG 系统
-        await rag.ainsert(md_text)
+        with open("./book.txt", "r", encoding="utf-8") as f:
+            await rag.ainsert(f.read())
 
         # Perform naive search
         print(
             await rag.aquery(
-                "宁德时代2024年上半年的财务状况如何?", param=QueryParam(mode="naive")
+                "What are the top themes in this story?", param=QueryParam(mode="naive")
             )
         )
 
         # Perform local search
         print(
             await rag.aquery(
-                "宁德时代2024年上半年的财务状况如何?", param=QueryParam(mode="local")
+                "What are the top themes in this story?", param=QueryParam(mode="local")
             )
         )
 
         # Perform global search
         print(
             await rag.aquery(
-                "宁德时代2024年上半年的财务状况如何?",
+                "What are the top themes in this story?",
                 param=QueryParam(mode="global"),
             )
         )
@@ -115,7 +100,7 @@ async def main():
         # Perform hybrid search
         print(
             await rag.aquery(
-                "宁德时代2024年上半年的财务状况如何?",
+                "What are the top themes in this story?",
                 param=QueryParam(mode="hybrid"),
             )
         )

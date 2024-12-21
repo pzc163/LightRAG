@@ -27,8 +27,12 @@ class Neo4JStorage(BaseGraphStorage):
     def load_nx_graph(file_name):
         print("no preloading of graph with neo4j in production")
 
-    def __init__(self, namespace, global_config):
-        super().__init__(namespace=namespace, global_config=global_config)
+    def __init__(self, namespace, global_config, embedding_func):
+        super().__init__(
+            namespace=namespace,
+            global_config=global_config,
+            embedding_func=embedding_func,
+        )
         self._driver = None
         self._driver_lock = asyncio.Lock()
         URI = os.environ["NEO4J_URI"]
@@ -85,9 +89,6 @@ class Neo4JStorage(BaseGraphStorage):
                 f'{inspect.currentframe().f_code.co_name}:query:{query}:result:{single_result["edgeExists"]}'
             )
             return single_result["edgeExists"]
-
-        def close(self):
-            self._driver.close()
 
     async def get_node(self, node_id: str) -> Union[dict, None]:
         async with self._driver.session() as session:
@@ -214,6 +215,7 @@ class Neo4JStorage(BaseGraphStorage):
                 neo4jExceptions.ServiceUnavailable,
                 neo4jExceptions.TransientError,
                 neo4jExceptions.WriteServiceUnavailable,
+                neo4jExceptions.ClientError,
             )
         ),
     )
