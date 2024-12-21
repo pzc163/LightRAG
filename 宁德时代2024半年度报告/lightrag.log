@@ -1,0 +1,64 @@
+2024-11-11 16:20:43,516 - lightrag - INFO - Logger initialized for working directory: ./宁德时代2024半年度报告
+2024-11-11 16:20:43,517 - lightrag - INFO - Load KV full_docs with 0 data
+2024-11-11 16:20:43,517 - lightrag - INFO - Load KV text_chunks with 0 data
+2024-11-11 16:20:43,517 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2024-11-11 16:21:04,247 - lightrag - INFO - [New Docs] inserting 1 docs
+2024-11-11 16:21:04,464 - lightrag - INFO - [New Chunks] inserting 153 chunks
+2024-11-11 16:21:04,464 - lightrag - INFO - Inserting 153 vectors to chunks
+2024-11-11 16:21:29,854 - lightrag - INFO - [Entity Extraction]...
+2024-11-11 16:24:56,894 - lightrag - INFO - Inserting 1097 vectors to entities
+2024-11-11 16:27:23,664 - lightrag - INFO - Inserting 477 vectors to relationships
+2024-11-11 16:28:34,320 - lightrag - INFO - Writing graph with 1134 nodes, 477 edges
+2024-11-11 16:28:36,375 - lightrag - INFO - Truncate 60 to 3 chunks
+2024-11-11 16:28:51,653 - lightrag - INFO - Local query uses 60 entites, 86 relations, 3 text units
+2024-11-11 16:29:02,279 - lightrag - INFO - Global query uses 64 entites, 60 relations, 3 text units
+2024-11-11 16:29:14,090 - lightrag - INFO - Local query uses 60 entites, 86 relations, 3 text units
+2024-11-11 16:29:15,804 - lightrag - INFO - Global query uses 64 entites, 60 relations, 3 text units
+2024-11-11 21:05:58,106 - lightrag - INFO - Logger initialized for working directory: ./宁德时代2024半年度报告
+2024-11-11 21:05:58,109 - lightrag - INFO - Load KV full_docs with 1 data
+2024-11-11 21:05:58,112 - lightrag - INFO - Load KV text_chunks with 153 data
+2024-11-11 21:05:58,115 - lightrag - INFO - Load KV llm_response_cache with 312 data
+2024-11-11 21:05:58,133 - lightrag - INFO - Loaded graph from ./宁德时代2024半年度报告/graph_chunk_entity_relation.graphml with 1134 nodes, 477 edges
+2024-11-11 21:05:58,229 - lightrag - WARNING - All docs are already in the storage
+2024-11-11 21:05:58,322 - lightrag - INFO - Writing graph with 1134 nodes, 477 edges
+2024-11-11 21:06:04,849 - lightrag - INFO - Truncate 60 to 3 chunks
+2024-11-11 21:06:06,886 - lightrag - INFO - Local query uses 60 entites, 86 relations, 3 text units
+2024-11-11 21:06:21,593 - lightrag - INFO - Global query uses 64 entites, 60 relations, 3 text units
+2024-11-11 21:06:34,577 - lightrag - INFO - Local query uses 60 entites, 86 relations, 3 text units
+2024-11-11 21:06:36,095 - lightrag - INFO - Global query uses 64 entites, 60 relations, 3 text units
+2024-11-11 21:07:54,818 - lightrag - INFO - Logger initialized for working directory: ./宁德时代2024半年度报告
+2024-11-11 21:07:54,820 - lightrag - INFO - Load KV full_docs with 1 data
+2024-11-11 21:07:54,823 - lightrag - INFO - Load KV text_chunks with 153 data
+2024-11-11 21:07:54,825 - lightrag - INFO - Load KV llm_response_cache with 315 data
+2024-11-11 21:07:54,845 - lightrag - INFO - Loaded graph from ./宁德时代2024半年度报告/graph_chunk_entity_relation.graphml with 1134 nodes, 477 edges
+2024-11-11 21:07:54,935 - lightrag - WARNING - All docs are already in the storage
+2024-11-11 21:07:55,027 - lightrag - INFO - Writing graph with 1134 nodes, 477 edges
+2024-11-11 21:07:58,355 - lightrag - INFO - Truncate 60 to 3 chunks
+2024-11-11 21:08:00,594 - lightrag - INFO - Local query uses 60 entites, 85 relations, 3 text units
+2024-11-11 21:08:18,897 - lightrag - INFO - Global query uses 64 entites, 60 relations, 3 text units
+2024-11-11 21:08:30,699 - lightrag - INFO - Local query uses 60 entites, 85 relations, 3 text units
+2024-11-11 21:08:32,243 - lightrag - INFO - Global query uses 64 entites, 60 relations, 3 text units
+2024-11-12 18:00:48,364 - lightrag - INFO - Logger initialized for working directory: ./宁德时代2024半年度报告
+2024-11-12 18:00:48,367 - lightrag - INFO - Load KV full_docs with 1 data
+2024-11-12 18:00:48,369 - lightrag - INFO - Load KV text_chunks with 153 data
+2024-11-12 18:00:48,372 - lightrag - INFO - Load KV llm_response_cache with 318 data
+2024-11-12 18:00:48,392 - lightrag - INFO - Loaded graph from ./宁德时代2024半年度报告/graph_chunk_entity_relation.graphml with 1134 nodes, 477 edges
+2024-11-12 18:00:48,479 - lightrag - WARNING - All docs are already in the storage
+2024-11-12 18:00:48,576 - lightrag - INFO - Writing graph with 1134 nodes, 477 edges
+2024-11-12 18:00:54,649 - lightrag - INFO - Truncate 60 to 3 chunks
+2024-11-12 18:00:56,790 - lightrag - INFO - Local query uses 60 entites, 85 relations, 3 text units
+2024-11-12 18:01:09,369 - lightrag - INFO - Global query uses 64 entites, 60 relations, 3 text units
+2024-11-12 18:01:21,684 - lightrag - INFO - Local query uses 60 entites, 85 relations, 3 text units
+2024-11-12 18:01:23,718 - lightrag - INFO - Global query uses 64 entites, 60 relations, 3 text units
+2024-11-12 18:32:20,609 - lightrag - INFO - Logger initialized for working directory: ./宁德时代2024半年度报告
+2024-11-12 18:32:20,611 - lightrag - INFO - Load KV full_docs with 1 data
+2024-11-12 18:32:20,613 - lightrag - INFO - Load KV text_chunks with 153 data
+2024-11-12 18:32:20,617 - lightrag - INFO - Load KV llm_response_cache with 321 data
+2024-11-12 18:32:20,636 - lightrag - INFO - Loaded graph from ./宁德时代2024半年度报告/graph_chunk_entity_relation.graphml with 1134 nodes, 477 edges
+2024-11-12 18:32:20,735 - lightrag - WARNING - All docs are already in the storage
+2024-11-12 18:32:20,834 - lightrag - INFO - Writing graph with 1134 nodes, 477 edges
+2024-11-12 18:32:23,585 - lightrag - INFO - Truncate 60 to 3 chunks
+2024-11-12 18:32:27,757 - lightrag - INFO - Local query uses 60 entites, 86 relations, 3 text units
+2024-11-12 18:32:41,506 - lightrag - INFO - Global query uses 64 entites, 60 relations, 3 text units
+2024-11-12 18:33:01,690 - lightrag - INFO - Local query uses 60 entites, 86 relations, 3 text units
+2024-11-12 18:33:03,480 - lightrag - INFO - Global query uses 64 entites, 60 relations, 3 text units

@@ -1,0 +1,12 @@
+2024-11-12 18:38:19,036 - lightrag - INFO - Logger initialized for working directory: ./AI_Studio_Demo/宁德时代2024半年度报告
+2024-11-12 18:38:19,037 - lightrag - INFO - Load KV full_docs with 0 data
+2024-11-12 18:38:19,037 - lightrag - INFO - Load KV text_chunks with 0 data
+2024-11-12 18:38:19,037 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2024-11-12 18:41:10,472 - lightrag - INFO - Logger initialized for working directory: ./AI_Studio_Demo/宁德时代2024半年度报告
+2024-11-12 18:41:10,473 - lightrag - INFO - Load KV full_docs with 0 data
+2024-11-12 18:41:10,473 - lightrag - INFO - Load KV text_chunks with 0 data
+2024-11-12 18:41:10,473 - lightrag - INFO - Load KV llm_response_cache with 2 data
+2024-11-12 18:44:39,926 - lightrag - INFO - Logger initialized for working directory: ./AI_Studio_Demo/宁德时代2024半年度报告
+2024-11-12 18:44:39,930 - lightrag - INFO - Load KV full_docs with 1 data
+2024-11-12 18:44:39,934 - lightrag - INFO - Load KV text_chunks with 153 data
+2024-11-12 18:44:39,934 - lightrag - INFO - Load KV llm_response_cache with 2 data
